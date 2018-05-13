@@ -50,7 +50,7 @@ end
   end
 
   ages_int = ages.map do |x|
-    ages_int
+    x
   end
 
   (ages_int.reduce(:+) / ages.length).round(0)
