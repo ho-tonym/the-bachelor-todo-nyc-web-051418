@@ -45,13 +45,13 @@ end
  def get_average_age_for_season(data, season)
   # code here
 
-  ages_as_int= []
   ages = data[season].map do |element|
       element["age"]
   end
 
-  ages.collect do |x|
-    ages_as_int << x.to_f
+  ages_int = ages.map do |x|
+    ages_int
   end
-  (ages_as_int.reduce(:+) / ages.length).round(0)
+
+  (ages_int.reduce(:+) / ages.length).round(0)
 end
