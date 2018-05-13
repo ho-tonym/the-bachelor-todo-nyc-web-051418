@@ -9,8 +9,8 @@ end
 
  def get_contestant_name(data, occupation)
   # code here
-  data.each do |season, array_of_contestants|
-    array_of_contestants.each do |contestants|
+  data.each do |season, element|
+    element.each do |contestants|
       if contestants["occupation"] == occupation
         return contestants["name"]
       end
@@ -21,8 +21,8 @@ end
  def count_contestants_by_hometown(data, hometown)
   # code here
  counter = 0
- data.each do |season, array_of_contestants|
-   array_of_contestants.each do |contestants|
+ data.each do |season, element|
+   element.each do |contestants|
      if contestants["hometown"] == hometown
        counter += 1
      end
@@ -33,8 +33,8 @@ end
 
 def get_occupation(data, hometown)
   # code here
-  data.each do |season, array_of_contestants|
-    array_of_contestants.each do |contestants|
+  data.each do |season, element|
+    element.each do |contestants|
       if contestants["hometown"] == hometown
         return contestants["occupation"]
       end
@@ -46,8 +46,8 @@ end
   # code here
   ages = []
   ages_as_int= []
-  data[season].each do |array_of_contestants|
-    ages << array_of_contestants["age"]
+  data[season].each do |element|
+    ages << element["age"]
   end
   ages.collect do |x|
     ages_as_int << x.to_f
