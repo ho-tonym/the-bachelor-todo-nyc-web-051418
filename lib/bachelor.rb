@@ -49,8 +49,8 @@ end
       element["age"]
   end
 
-  ages_int = ages.map do |x|
-    x.to_f
+  ages_int = ages.map do |number|
+    number.to_f
   end
 
   (ages_int.reduce(:+) / ages.length).round(0)
